@@ -1,0 +1,44 @@
+SMARTPOWER STANDALONE — REPLACE AN EXISTING GITHUB REPOSITORY
+
+This version does not use the previous backend platform. To make your GitHub repository match this package exactly, do NOT upload it on top of the old files.
+
+Recommended in GitHub Codespaces:
+
+1. Keep this terminal at the repository root.
+2. Make sure you have no work you need to keep in the current branch.
+3. Delete the old tracked project files:
+
+   git rm -r .
+
+4. Extract/copy the contents of this package into the repository root.
+5. Remove any old package-lock.json that remains:
+
+   rm -f package-lock.json
+
+6. Install dependencies:
+
+   npm install
+
+7. Validate:
+
+   npm run validate
+
+8. Build:
+
+   npm run build
+
+9. Start the full stack:
+
+   npm run codespace:start
+
+The app uses:
+- React + Vite for the frontend (port 5173)
+- Node.js built-in HTTP server for the API (port 4400)
+- server/data/db.json as a runtime data store created automatically on first start
+
+Demo accounts:
+- Customer: demo@smartpower.local / demo1234
+- Staff: staff@smartpower.local / staff1234
+- Admin: admin@smartpower.local / admin1234
+
+Do not commit node_modules. This package intentionally contains no hidden files.
